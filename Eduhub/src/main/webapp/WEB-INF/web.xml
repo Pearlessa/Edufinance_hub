@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <!--
+        version="4.0" with the javaee (javax.servlet) namespace is required here,
+        NOT version="5.0"/jakarta.ee (the file's previous declaration). Jakarta
+        Servlet 5.0 uses the jakarta.servlet.* package and only runs on Tomcat 10+;
+        this project's pom.xml depends on javax.servlet-api 4.0.1 and every servlet
+        imports javax.servlet.*, which is Servlet 4.0 for Tomcat 9. Declaring 5.0
+        while running javax.servlet code is a spec mismatch that can fail the whole
+        web application at container startup - which shows up as EVERY page,
+        including plain static HTML files, returning HTTP 500, not just the
+        dynamic ones.
+    -->
+    <display-name>EduFinance Hub</display-name>
+    <welcome-file-list>
+        <welcome-file>wf01_home.html</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!--
+        AuthServlet, BursaryServlet, WalletServlet, LearnServlet, CalendarServlet,
+        NotificationServlet and QuestServlet all carry an @WebServlet annotation in
+        their own source file (e.g. @WebServlet(urlPatterns = {"/api/auth/*"})),
+        which is enough on its own for Tomcat to register them. They must NOT also
+        be declared here: having both an annotation and a <servlet-mapping> for the
+        same URL pattern makes Tomcat refuse to deploy the WAR at all, with
+        "multiple servlets map to the same URL pattern" - which is why every page
+        was failing to connect, not just registration. The previous AuthServlet
+        entry here was doubly broken: it duplicated the annotation's own mapping
+        AND used a malformed class name (".AuthServlet", missing the
+        "za.ac.cput.eduhub.controller." package prefix), which alone would have
+        thrown a ClassNotFoundException at deploy time.
+
+        DocumentServlet is the one servlet that still needs an entry here: it needs
+        a <multipart-config> for file uploads, which only a web.xml entry (or a
+        matching @MultipartConfig annotation) can provide. It carries no
+        @WebServlet annotation of its own, so this is its only registration - no
+        duplicate, no conflict.
+    -->
+    <servlet>
+        <servlet-name>DocumentServlet</servlet-name>
+        <servlet-class>za.ac.cput.eduhub.controller.DocumentServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>10485760</max-file-size>
+            <max-request-size>20971520</max-request-size>
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DocumentServlet</servlet-name>
+        <url-pattern>/api/documents/*</url-pattern>
+    </servlet-mapping>
+</web-app>

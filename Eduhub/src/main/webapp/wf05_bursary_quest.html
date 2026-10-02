@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFinance Hub - Welcome to Bursary Quest</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="quest-intro">
+    <div class="site-wrapper">
+        <header class="app-header">
+            <a href="wf04_login.html" class="nav-icon-btn back-btn" aria-label="Back">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
+            </a>
+            <div class="brand-title header-center-title">Bursary Quest</div>
+            <a href="wf15_sidebar.html" class="nav-icon-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></svg>
+            </a>
+        </header>
+
+        <main class="main-viewport-content center-content">
+            <section class="quest-view-panel text-center">
+                <div class="quest-circle-emblem">
+                    <svg viewBox="0 0 100 100" class="emblem-svg">
+                        <circle cx="50" cy="50" r="48" fill="#8F6BFF"/>
+                        <path d="M50 20L80 34L50 48L20 34L50 20Z" fill="#FFFFFF"/>
+                        <path d="M30 43V58C30 65 40 72 50 72C60 72 70 65 70 58V43L50 52L30 43Z" fill="#3D1CB8"/>
+                        <path d="M50 56L68 68H54V76H46V68H32L50 56Z" fill="#FFB703"/>
+                    </svg>
+                </div>
+                <h1 class="hero-headline">
+                    Welcome to your <br>
+                    <span class="highlight-red">Bursary</span> <span class="highlight-amber">Quest</span>
+                </h1>
+                <p class="hero-body-text">
+                    5 quick steps to build your Eligibility DNA. We'll match you with bursaries you can actually win.
+                </p>
+
+                <div class="progress-bar-container">
+                    <div class="prog-segment active"></div>
+                    <div class="prog-segment"></div>
+                    <div class="prog-segment"></div>
+                    <div class="prog-segment"></div>
+                    <div class="prog-segment"></div>
+                </div>
+
+                <a href="wf06_step1_identity.html" class="btn-primary full-width-btn">
+                    <span>Start the Quest</span>
+                    <svg viewBox="0 0 24 24" class="btn-inline-icon"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" fill="currentColor"/></svg>
+                </a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

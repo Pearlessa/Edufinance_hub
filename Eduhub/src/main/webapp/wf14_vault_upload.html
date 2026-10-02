@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFinance Hub - Upload Files</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="upload">
+    <div class="site-wrapper">
+        <header class="app-header">
+            <a href="wf13_vault_main.html" class="nav-icon-btn back-btn" aria-label="Back">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
+            </a>
+            <h1 class="brand-title header-center-title">Upload Files</h1>
+            <a href="wf15_sidebar.html" class="nav-icon-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></svg>
+            </a>
+        </header>
+
+        <main class="main-viewport-content center-content">
+            <div class="upload-stage-wrapper">
+                <form id="vaultUploadForm" novalidate>
+                    <div class="form-group">
+                        <label for="docTypeSelect">Document Type<span class="required-asterisk">*</span></label>
+                        <select id="docTypeSelect" name="documentType" class="form-input" required>
+                            <option value="South African ID">South African ID</option>
+                            <option value="Parent/Guardian ID">Parent/Guardian ID</option>
+                            <option value="Matric Certificate or Latest Results">Matric Certificate or Latest Results</option>
+                            <option value="Proof of Registration">Proof of Registration</option>
+                            <option value="Proof of Residence">Proof of Residence</option>
+                            <option value="Proof of Income">Proof of Income (or Affidavit)</option>
+                        </select>
+                    </div>
+
+                    <div id="dropzoneArea" class="dropzone">
+                        <div class="dropzone-icon">
+                            <svg viewBox="0 0 24 24" class="upload-cloud-svg"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z" fill="currentColor"/></svg>
+                        </div>
+                        <strong class="dropzone-lead">Drop file or tap to choose</strong>
+                        <span class="dropzone-sub">PDF, JPG, PNG · max 10 MB</span>
+                        <input type="file" id="vaultFileInput" name="file" class="is-hidden" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+                    <div id="selectedFileNameDisplay" class="selected-file-label is-hidden"></div>
+
+                    <h3 class="section-title">Recent uploads</h3>
+                    <div id="recentUploadsListFeed" class="recent-uploads-feed">
+                        <div class="card recent-upload-row">
+                            <div class="flex-align-gap">
+                                <svg viewBox="0 0 24 24" class="svg-icon purple-svg"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="currentColor"/></svg>
+                                <span>Uploaded files</span>
+                            </div>
+                            <span class="highlight-green font-bold"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+
+                    <a href="wf13_vault_main.html" class="btn-primary full-width-btn margin-top-btn">Done</a>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

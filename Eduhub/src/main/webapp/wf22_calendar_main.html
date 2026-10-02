@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFinance Hub - Calendar</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="calendar">
+    <div class="site-wrapper">
+        <header class="app-header">
+            <a href="wf01_home.html" class="logo-wrapper">
+                <img src="assets/logo.png" alt="EduFinance Hub logo" class="brand-logo-svg">
+                <div class="brand-title">Calendar</div>
+            </a>
+            <a href="wf15_sidebar.html" class="nav-icon-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></svg>
+            </a>
+        </header>
+
+        <main class="main-viewport-content">
+            <div class="calendar-top-bar">
+                <div>
+                    <h1 class="screen-title">Calendar</h1>
+                    <p class="screen-desc">Track deadlines, payments, and important dates all in one place.</p>
+                </div>
+                <a href="wf23_add_event.html" class="btn-primary compact-btn">Add Event +</a>
+            </div>
+
+            <div class="grid-desktop-split">
+                <section class="card calendar-matrix-card">
+                    <div class="calendar-controls-row">
+                        <button type="button" id="prevMonthBtn" class="btn-outline compact-btn">◀</button>
+                        <h2 id="calendarMonthYearDisplay" class="calendar-current-label">MAY 2026</h2>
+                        <button type="button" id="nextMonthBtn" class="btn-outline compact-btn">▶</button>
+                    </div>
+                    <div class="calendar-table-head">
+                        <span class="day-head">Sun</span><span class="day-head">Mon</span><span class="day-head">Tue</span><span class="day-head">Wed</span><span class="day-head">Thu</span><span class="day-head">Fri</span><span class="day-head">Sat</span>
+                    </div>
+                    <div id="dynamicCalendarGrid" class="calendar-days-grid"></div>
+                </section>
+
+                <section class="card">
+                    <h2 class="section-title"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> Upcoming Events</h2>
+                    <div id="calendarFeedList" class="calendar-events-feed"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

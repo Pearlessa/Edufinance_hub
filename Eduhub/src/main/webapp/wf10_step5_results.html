@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFinance Hub - DNA Results</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="step5">
+    <div class="site-wrapper">
+        <header class="app-header">
+            <a href="wf09_step4_household.html" class="nav-icon-btn back-btn" aria-label="Back">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
+            </a>
+            <div class="brand-title header-center-title">DNA Results</div>
+            <a href="wf15_sidebar.html" class="nav-icon-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></svg>
+            </a>
+        </header>
+
+        <main class="main-viewport-content center-content">
+            <section class="quest-view-panel text-center">
+                <div class="dna-helix-emblem">
+                    <svg viewBox="0 0 100 100" class="dna-svg">
+                        <circle cx="50" cy="50" r="48" fill="#DDD5FE"/>
+                        <path d="M30 30C45 45 55 55 70 70M70 30C55 45 45 55 30 70" stroke="#E63946" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M35 38H65M38 50H62M35 62H65" stroke="#7C5CFC" stroke-width="4"/>
+                    </svg>
+                </div>
+                <h1 class="hero-headline">Your DNA is built!</h1>
+                <p class="hero-body-text">
+                    We found <strong id="dnaMatchesText" class="highlight-primary">0 bursaries</strong> matching your profile.
+                </p>
+
+                <div class="grid-2col kpi-cards-grid-4">
+                    <div class="card kpi-card">
+                        <span class="kpi-caption">DNA</span>
+                        <div id="kpiDnaPercentage" class="kpi-number highlight-primary">--</div>
+                        <span class="kpi-sublabel">Scholar Gold</span>
+                    </div>
+                    <div class="card kpi-card">
+                        <span class="kpi-caption">MATCHES</span>
+                        <div id="kpiMatchesCount" class="kpi-number highlight-primary">0</div>
+                        <span class="kpi-sublabel">Active</span>
+                    </div>
+                    <div class="card kpi-card">
+                        <span class="kpi-caption">VALUE</span>
+                        <div id="kpiPotentialValue" class="kpi-number highlight-primary">R0</div>
+                        <span class="kpi-sublabel">Potential</span>
+                    </div>
+                    <div class="card kpi-card">
+                        <span class="kpi-caption">ACADEMIC AVG</span>
+                        <div id="kpiAcademicAverage" class="kpi-number highlight-primary">--</div>
+                        <span class="kpi-sublabel">Overall Marks</span>
+                    </div>
+                </div>
+
+                <a href="wf11_discover.html" class="btn-primary full-width-btn">View Matches <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

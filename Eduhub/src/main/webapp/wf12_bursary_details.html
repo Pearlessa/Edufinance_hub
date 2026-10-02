@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFinance Hub - Bursary Details</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="bursary-details">
+    <div class="site-wrapper">
+        <header class="app-header">
+            <a href="wf11_discover.html" class="nav-icon-btn back-btn" aria-label="Back">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
+            </a>
+            <h1 class="brand-title header-center-title">Bursary</h1>
+            <a href="wf15_sidebar.html" class="nav-icon-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></svg>
+            </a>
+        </header>
+
+        <main class="main-viewport-content center-content">
+            <div class="bursary-details-stage">
+                <section class="card card-hero-purple details-hero-banner">
+                    <span class="badge badge-purple uppercase-badge">ZA</span>
+                    <h2 id="detTitleDisplay" class="hero-subhead">NSFAS Full Cover</h2>
+                    <p id="detOrgDisplay" class="subtext-muted">Department of Higher Education</p>
+
+                    <div class="grid-2col meta-pills-grid">
+                        <div class="meta-pill-card">
+                            <span class="subtext-muted">Amount</span>
+                            <div id="detAmountDisplay" class="pill-metric-highlight">Full tuition + R1,750/month</div>
+                        </div>
+                        <div class="meta-pill-card">
+                            <span class="subtext-muted">Closes</span>
+                            <div id="detDeadlineDisplay" class="pill-metric-highlight highlight-red">30 November</div>
+                        </div>
+                    </div>
+                </section>
+
+                <h3 class="section-title">About</h3>
+                <p id="detAboutDisplay" class="screen-desc">
+                    Government-funded full bursary for households earning under R350,000 per year.
+                </p>
+
+                <h3 class="section-title">Requirements</h3>
+                <div class="requirements-cards-feed">
+                    <div class="card card-purple-tint req-check-row">
+                        <span class="check-circle-green"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <strong>South African ID</strong>
+                    </div>
+                    <div class="card card-purple-tint req-check-row">
+                        <span class="check-circle-green"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <strong>Household income proof</strong>
+                    </div>
+                    <div class="card card-purple-tint req-check-row">
+                        <span class="check-circle-green"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <strong>Matric results</strong>
+                    </div>
+                    <div class="card card-purple-tint req-check-row">
+                        <span class="check-circle-green"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <strong>Acceptance letter</strong>
+                    </div>
+                </div>
+
+                <div class="vault-check-card">
+                    <div>
+                        <strong class="highlight-amber">VAULT CHECK</strong>
+                        <div class="subtext-muted">Check your documents</div>
+                    </div>
+                    <a href="wf13_vault_main.html" class="btn-outline compact-btn">Open</a>
+                </div>
+
+                <input type="hidden" id="activeBursaryId" value="1">
+                <button type="button" id="submitApplicationActionBtn" class="btn-primary full-width-btn">Apply now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

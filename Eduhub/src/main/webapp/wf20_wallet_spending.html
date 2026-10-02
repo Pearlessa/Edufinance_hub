@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFinance Hub - Spending Tab</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="wallet-spending">
+    <div class="site-wrapper">
+        <header class="app-header">
+            <a href="wf01_home.html" class="logo-wrapper">
+                <img src="assets/logo.png" alt="EduFinance Hub logo" class="brand-logo-svg">
+                <div class="brand-title">Student Wallet</div>
+            </a>
+            <a href="wf15_sidebar.html" class="nav-icon-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" class="svg-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></svg>
+            </a>
+        </header>
+
+        <main class="main-viewport-content">
+            <h1 class="screen-title">Student Wallet</h1>
+            <p class="screen-desc">Track your expenses, manage budgets, and stay financially healthy.</p>
+
+            <div class="card card-blue wallet-summary-card">
+                <span class="metric-caption">Available Balance</span>
+                <div id="walletBalance" class="wallet-balance-num">R0.00</div>
+                <div class="grid-2col">
+                    <div class="kpi-mini-box">
+                        <span class="submetric-caption">This Month Savings</span>
+                        <div id="walletSavings" class="submetric-val highlight-primary">R0.00</div>
+                    </div>
+                    <div class="kpi-mini-box">
+                        <span class="submetric-caption">Monthly Expenses</span>
+                        <div id="walletExpenses" class="submetric-val highlight-red">R0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-container">
+                <a href="wf19_wallet_overview.html" class="tab-btn text-center">Overview</a>
+                <a href="wf20_wallet_spending.html" class="tab-btn active text-center">Spending</a>
+                <a href="wf21_wallet_trends.html" class="tab-btn text-center">Trends</a>
+            <a href="wf17_add_transaction.html?type=income" class="tab-btn text-center">+ Add Balance</a>
+            </div>
+
+            <div class="spending-actions-bar text-center">
+                <a href="wf18_add_budget.html" class="btn-primary compact-btn">Add Category +</a>
+            </div>
+
+            <div id="overBudgetNotice" class="alert-box alert-over-budget is-hidden">
+                <div><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>️ <strong>Over Budget</strong><br><span id="overBudgetMessage"></span></div>
+            </div>
+
+            <div id="categoryCardsContainer" class="category-cards-feed"></div>
+            <div id="noCategoriesMessage" class="card text-center is-hidden">You haven't added any budget categories yet. Use "Add Category" above to set spending limits and start tracking.</div>
+        </main>
+    </div>
+</body>
+</html>

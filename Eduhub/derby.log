@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Oct 02 05:46:10 SAST 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-01a0-fab8-3164-0000049d90d8 
+on database directory C:\Users\Comaro Crossing\.eduhub_local_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@105be200 
+Loaded from file:/C:/Users/Comaro%20Crossing/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Azul Systems, Inc.
+java.runtime.version=25.0.2+10-LTS
+user.dir=C:\Users\Comaro Crossing\OneDrive\Desktop\files\EduFinanceHub-fixed\Eduhub
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
